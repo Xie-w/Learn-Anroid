@@ -13,6 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.ramcosta.composedestinations.generated.destinations.HomeScreenDestination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.utils.rememberDestinationsNavigator
+import com.ramcosta.composedestinations.utils.toDestinationsNavigator
+import com.xie.learn.ui.main.home.HomeScreen
 import com.xie.learn.ui.main.view.MainItemView
 import com.xie.learn.ui.theme.LearnTheme
 
@@ -35,11 +40,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen() {
-    val navigation = rememberNavController()
+    val navController = rememberNavController()
+    val navigator = navController.rememberDestinationsNavigator()
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Column(modifier = Modifier.padding(innerPadding)) {
             MainItemView(title = "home") {
-
+                navigator.navigate(HomeScreenDestination())
             }
 
             MainItemView(title = "home") {
