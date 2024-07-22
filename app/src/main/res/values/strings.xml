@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Learn</string>
+    <string name="home">Home</string>
+    <string name="discover">Discover</string>
+    <string name="chats">Chats</string>
+    <string name="mine">Mine</string>
 </resources>
