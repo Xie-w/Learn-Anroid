@@ -89,7 +89,7 @@ fun MainView(
         ) {
             // Navigation
             MainItemView(title = "Navigation") {
-                navigator.navigate(NavigationScreenDestination)
+                navigator.navigate(direction = NavigationScreenDestination)
             }
         }
     }

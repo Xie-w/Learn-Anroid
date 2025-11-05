@@ -9,6 +9,16 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri(path = "https://repo1.maven.org/maven2/")
+        }
+        maven {
+            url = uri(path = "https://repo1.maven.org/maven3/")
+        }
+        mavenLocal()
+        flatDir {
+            dirs("libs")
+        }
     }
 }
 dependencyResolutionManagement {

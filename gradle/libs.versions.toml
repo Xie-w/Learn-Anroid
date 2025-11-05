@@ -1,17 +1,29 @@
 [versions]
-agp = "8.5.1"
-kotlin = "1.9.0"
-coreKtx = "1.13.1"
+compileSdk = "36"
+minSdk = "24"
+targetSdk = "36"
+versionCode = "1"
+versionName = "1.0.0"
+agp = "8.13.0"
+kotlin = "2.2.21"
+coreKtx = "1.15.0"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.8.2"
-activityCompose = "1.8.0"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.9.4"
+activityCompose = "1.10.1"
 composeBom = "2024.04.01"
-uiTestManifest = "1.6.6"
-destinations = "2.1.0-beta09"
-kotlinKsp = "1.9.0-1.0.13"
-firebaseCrashlyticsBuildtools = "3.0.2"
+uiTestManifest = "1.9.0"
+destinations = "2.3.0"
+kotlinKsp = "2.2.0-2.0.2"
+firebaseCrashlyticsBuildtools = "3.0.3"
+retrofit2 = "3.0.0"
+loggingInterceptor = "4.12.0"
+material3 = "1.4.0"
+serializationJson = "1.9.0"
+multiplatform = "1.9.0"
+serialization = "1.9.0"
+retrofit2KotlinxSerialization = "3.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,16 +39,24 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "uiTestManifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 # Destinations
 compose-destinations-core = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "destinations" }
 compose-destinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "destinations" }
 compose-destinations-bottom-sheet = { group = "io.github.raamcosta.compose-destinations", name = "bottom-sheet", version.ref = "destinations" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+# Retrofit
+squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+squareup-retrofit2-serialization-json = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit2KotlinxSerialization" }
+squareup-okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJson" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 # KSP
 kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kotlinKsp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "multiplatform" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
 
